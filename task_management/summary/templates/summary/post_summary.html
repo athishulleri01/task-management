@@ -1,0 +1,27 @@
+
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>summary</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <h2 style="text-align: center;">work summary</h2>
+	<table align="center">
+		<tr>
+			<td>summary</td>
+			<td><textarea name="summary" class="form-control"></textarea></td>
+
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" class="btn btn-primary"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
+{% endblock %}

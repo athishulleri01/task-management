@@ -1,0 +1,33 @@
+{% extends 'temp/manager.html' %}
+{% block base %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="" align="center">
+    <tr>
+        <th>title</th>
+        <th>description</th>
+        <th>file</th>
+        <th>current date</th>
+        <th>end date</th>
+        <th>summary</th>
+        <th>feedback</th>
+    </tr>
+    {% for i in x %}
+    <tr>
+        <td>{{i.title}}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.file_attach }}</td>
+        <td>{{ i.current_date }}</td>
+        <td>{{ i.end_date }}</td>
+        <td><a href="{% url 'vs' idd=i.mt_id %}#cc">summary</a> </td>
+        <td><a href="{%  url 'pfeed' idd=i.mt_id%}#cc">feedback</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

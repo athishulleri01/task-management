@@ -1,0 +1,43 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+<center><h2>asign task to manager</h2></center>
+<table align="center">
+    <tr>
+        <td>title</td>
+        <td><input type="text" name="title"  class="form-control"></td>
+    </tr>
+    <tr>
+        <td>description</td>
+        <td><textarea name="description"  class="form-control"></textarea></td>
+    </tr>
+    <tr>
+        <td>file attach</td>
+        <td><input type="file" name="file"  class="form-control"></td>
+    </tr>
+
+     <tr>
+        <td>start date</td>
+        <td><input type="date" name="s_date" class="form-control"></td>
+    </tr>
+     <tr>
+        <td>end date</td>
+        <td><input type="date" name="e_date" class="form-control"></td>
+    </tr>
+     <tr>
+        <td></td>
+        <td><input type="submit" class="btn btn-primary"></td>
+    </tr>
+</table>
+    </form>
+</body>
+</html>
+{% endblock %}

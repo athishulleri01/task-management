@@ -1,0 +1,35 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" >
+    {% csrf_token %}
+    <center><h2>Login</h2></center>
+    <table align="center">
+        <tr>
+            <td>user name or id</td>
+            <td><input type="text" name="uname" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="pass" class="form-control"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" class="btn btn-primary"></td>
+        </tr>
+        <tr>
+            <td></td>
+
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+{% endblock %}

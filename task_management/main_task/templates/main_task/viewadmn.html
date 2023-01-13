@@ -1,0 +1,29 @@
+
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th>title</th>
+        <th>Feedback</th>
+        <th>Date</th>
+    </tr>
+    {% for i in x %}
+    <tr>
+        <td>{{ i.title }}</td>
+        <td>{{ i.feedback }}</td>
+        <td>{{ i.feed_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
+{% endblock %}

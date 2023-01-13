@@ -1,0 +1,23 @@
+
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2" align="center">
+    <tr>
+        <th>title</th>
+    </tr>
+    {% for i in objval %}
+    <tr>
+        <th><a href="{% url 'vdts' idd=i.mt_id %}#cc" >{{ i.title }}</a></th></a>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

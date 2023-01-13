@@ -1,0 +1,34 @@
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+  <center> <h2>post notification</h2></center>
+<table align="center">
+    <tr>
+        <td>title</td>
+        <td><input type="text" name="title" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>description</td>
+        <td><textarea name="description" class="form-control"></textarea></td>
+    </tr>
+    <tr>
+        <td>file</td>
+        <td><input type="file" name="file" class="form-control"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" class="btn btn-primary"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

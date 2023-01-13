@@ -1,0 +1,25 @@
+{% extends 'temp/manager.html' %}
+{% block base %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>feedback</h2></center>
+<form method="post">
+     {% csrf_token %}
+<table align="center" >
+  <tr>
+      <td>write here : </td>
+      <td><textarea name="feed"></textarea> </td>
+  </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

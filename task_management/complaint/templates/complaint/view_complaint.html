@@ -1,0 +1,30 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>view and replay complaint</h2></center>
+<table border="" align="center">
+
+    <tr>
+        <th>complaint</th>
+        <th>date</th>
+        <th>replay</th>
+    </tr>
+    {%for i in objval%}
+    <tr>
+        <td>{{ i.complaint }}</td>
+        <td>{{ i.date }}</td>
+        <td><a href="{% url 'rp' idd=i.complaint_id %}">replay</a> </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
+{% endblock %}

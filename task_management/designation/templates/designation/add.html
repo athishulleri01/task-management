@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <center><h2>Designation</h2></center>
+    <table align="center">
+        <tr>
+            <td>name</td>
+            <td><input type="text" name="dname"></td>
+        </tr>
+        <tr>
+            <td>rank</td>
+            <td><input type="text" name="rank"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

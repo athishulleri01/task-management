@@ -1,0 +1,23 @@
+from django.db import models
+
+# Create your models here.
+class EmpRegister(models.Model):
+    emp_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    password = models.CharField(max_length=45, blank=True, null=True)
+    department = models.CharField(max_length=45, blank=True, null=True)
+    qualification = models.CharField(max_length=45, blank=True, null=True)
+    experience = models.CharField(max_length=45, blank=True, null=True)
+    address = models.CharField(max_length=50, blank=True, null=True)
+    contact_no = models.CharField(max_length=45, blank=True, null=True)
+    dob = models.CharField(max_length=45, blank=True, null=True)
+    email = models.CharField(max_length=45, blank=True, null=True)
+    status = models.CharField(max_length=45, blank=True, null=True)
+    job_id = models.IntegerField(blank=True, null=True)
+    rating = models.IntegerField(blank=True, null=True)
+    age = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'emp_register'
+
