@@ -4,5 +4,6 @@ from complaint import views
 urlpatterns = [
     url('post_comp/',views.post_complaint),
     url('view_complaint/',views.view_comp),
-    url('replay/(?P<idd>\w+)',views.replay,name="rp")
+    url('replay/(?P<idd>\w+)',views.replay,name="rp"),
+    url('ompflut/',views.complaint_view.as_view())
 ]

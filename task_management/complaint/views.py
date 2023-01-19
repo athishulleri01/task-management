@@ -50,8 +50,8 @@ class complaint_view(APIView):
         ob = Complaint()
         ob.emp_id='1'
         ob.complaint=request.data['complaint']
-        ob.date=request.data['date']
-        ob.status=request.data['status']
+        ob.date=datetime.datetime.now()
+        ob.status='pending'
         ob.save()
         return HttpResponse("yess")
 
