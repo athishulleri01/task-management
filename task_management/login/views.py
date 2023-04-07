@@ -14,12 +14,15 @@ def log(request):
                 if tp=="admin":
                     request.session["u_id"]=uid
                     return HttpResponseRedirect('/temp/admin/')
-                elif tp=="manager":
+                elif tp=="Manager":
                     request.session["u_id"]=uid
                     return HttpResponseRedirect('/temp/manager/')
                 elif tp=="employee":
                     request.session["u_id"]=uid
                     return HttpResponseRedirect('/temp/employee/')
+                elif tp=="taskmanager":
+                    request.session["u_id"]=uid
+                    return HttpResponseRedirect('/temp/taskm/')
         else:
             obje="incorrect username or password"
             context={

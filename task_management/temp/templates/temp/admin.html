@@ -8,7 +8,7 @@
         <meta content="Construction Company Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="/static/img/favicon.ico" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
                         <div class="col-lg-4 col-md-12">
                             <div class="logo">
                                 <a href="index.html">
-                                    <!-- <h1>Task Management</h1> -->
+                                    <h2>Task Management</h2>
                                     <!-- <img src="img/logo.jpg" alt="Logo"> -->
                                 </a>
                             </div>
@@ -94,11 +94,35 @@
 
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto">
+                                <a href="/temp/admin/" class="nav-item nav-link active">Home</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Employee</a>
+                                    <div class="dropdown-menu">
+                                        <a href="/add_employee/pst/#bb" class="dropdown-item">Register</a>
+                                        <a href="/employee/vw_mid_emp/#bb" class="dropdown-item">Employee Details</a>
+
+                                    </div>
+                                </div>
+
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Department</a>
+                                    <div class="dropdown-menu">
+                                        <a href="/department/post_department/#bb" class="dropdown-item">Create department</a>
+                                        <a href="department/view_department/#bb" class="dropdown-item">View Department</a>
+                                    </div>
+                                </div>
                                <!--  <a href="#" class="nav-item nav-link active">Login</a>
                                 <a href="#" class="nav-item nav-link">Register</a>-->
-                                <a href="/department/post_department/#bb" class="nav-item nav-link">Create department</a>
-                                <a href="/main_task/pst/#bb" class="nav-item nav-link">Asign task</a>
-                                <a href="/manager/slct_mngr/#bb" class="nav-item nav-link">Manage Manager</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Task</a>
+                                    <div class="dropdown-menu">
+                                               <a href="/main_task/pst/#bb" class="dropdown-item">Asign task</a>
+                                        <a href="/main_task/vw_m_status/#bb" class="dropdown-item">View Task Status</a>
+                                        <a href="/summary/view_summary/#bb" class="dropdown-item">View Task Summary</a>
+                                    </div>
+                                </div>
+
+
                                 <!--<div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage</a>
                                     <div class="dropdown-menu">
@@ -108,24 +132,25 @@
                                     </div>
                                 </div>-->
 
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Views</a>
-                                    <div class="dropdown-menu">
-                                        <a href="/main_task/vwadm/#bb" class="dropdown-item">Feedback</a>
-                                        <a href="/complaint/view_complaint/#bb" class="dropdown-item">Complaint</a>
-                                        <a href="#" class="dropdown-item">Employee Status</a>
-                                        <a href="/summary/view_summary/#bb" class="dropdown-item">Summary</a>
-                                        <a href="/main_task/vw_m_status/#bb" class="dropdown-item">Task Status</a>
-                                        <a href="department/view_department/#bb" class="dropdown-item">Department</a>
 
-                                    </div>
-                                </div><div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Post</a>
+
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notification</a>
                                     <div class="dropdown-menu">
-                                        <a href="/notification_admin/post_notification/#bb" class="dropdown-item">Notification</a>
+                                        <a href="/notification_admin/post_notification/#bb" class="dropdown-item">Post Notification</a>
+                                         <a href="/notification_admin/delet_admin_notification/#bb" class="dropdown-item">view Created notification</a>
 
                                     </div>
                                 </div>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Complaint</a>
+                                    <div class="dropdown-menu">
+                                                                   <a href="/complaint/view_complaint/#bb" class="dropdown-item">View & Reply Complaint</a>
+
+                                    </div>
+                                </div>
+                                <a href="/main_task/vwadm/#bb" class="nav-item nav-link ">View Feedback</a>
+
                                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a>-->
                             </div>
                             <div class="ml-auto">
@@ -149,27 +174,27 @@
                     <div class="carousel-item active">
                         <img src="/static/img/carousel-1.jpg" alt="Carousel Image">
                         <div class="carousel-caption">
-                            <p class="animated fadeInRight">We Are Professional</p>
+                            <p class="animated fadeInRight">Task Management</p>
                             <h1 class="animated fadeInLeft">For Your Dream Project</h1>
-                            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>
+{#                            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>#}
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <img src="/static/img/mm.jpg" alt="Carousel Image">
                         <div class="carousel-caption">
-                            <p class="animated fadeInRight">Professional Builder</p>
-                            <h1 class="animated fadeInLeft">We Build Your Home</h1>
-                            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>
+                            <p class="animated fadeInRight">Task Management</p>
+                            <h1 class="animated fadeInLeft">For Your Dream Project</h1>
+{#                            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>#}
                         </div>
                     </div>
 
                     <div class="carousel-item">
                         <img src="/static/img/carousel-3.jpg" alt="Carousel Image">
                         <div class="carousel-caption">
-                            <p class="animated fadeInRight">We Are Trusted</p>
-                            <h1 class="animated fadeInLeft">For Your Dream Home</h1>
-                            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>
+                            <p class="animated fadeInRight">Task Management</p>
+                            <h1 class="animated fadeInLeft">For Your Dream Project</h1>
+{#                            <a class="btn animated fadeInUp" href="https://htmlcodex.com/construction-company-website-template">Get A Quote</a>#}
                         </div>
                     </div>
                 </div>
@@ -187,45 +212,45 @@
 
 
             <!-- Feature Start-->
-            <div class="feature wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="flaticon-worker"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h3>Expert Worker</h3>
-                                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="flaticon-building"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h3>Quality Work</h3>
-                                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="flaticon-call"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h3>24/7 Support</h3>
-                                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{#            <div class="feature wow fadeInUp" data-wow-delay="0.1s">#}
+{#                <div class="container-fluid">#}
+{#                    <div class="row align-items-center">#}
+{#                        <div class="col-lg-4 col-md-12">#}
+{#                            <div class="feature-item">#}
+{#                                <div class="feature-icon">#}
+{#                                    <i class="flaticon-worker"></i>#}
+{#                                </div>#}
+{#                                <div class="feature-text">#}
+{#                                    <h3>Expert Worker</h3>#}
+{#                                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-4 col-md-12">#}
+{#                            <div class="feature-item">#}
+{#                                <div class="feature-icon">#}
+{#                                    <i class="flaticon-building"></i>#}
+{#                                </div>#}
+{#                                <div class="feature-text">#}
+{#                                    <h3>Quality Work</h3>#}
+{#                                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-4 col-md-12">#}
+{#                            <div class="feature-item">#}
+{#                                <div class="feature-icon">#}
+{#                                    <i class="flaticon-call"></i>#}
+{#                                </div>#}
+{#                                <div class="feature-text">#}
+{#                                    <h3>24/7 Support</h3>#}
+{#                                    <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
             <!-- Feature End-->
 
 
@@ -820,78 +845,78 @@
 {% endblock %}
  </div>
             <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Office Contact</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info@example.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Building Construction</a>
-                                <a href="">House Renovation</a>
-                                <a href="">Architecture Design</a>
-                                <a href="">Interior Design</a>
-                                <a href="">Painting</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="newsletter">
-                                <h2>Newsletter</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu
-                                </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{#            <div class="footer wow fadeIn" data-wow-delay="0.3s">#}
+{#                <div class="container">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-6 col-lg-3">#}
+{#                            <div class="footer-contact">#}
+{#                                <h2>Office Contact</h2>#}
+{#                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>#}
+{#                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>#}
+{#                                <p><i class="fa fa-envelope"></i>info@example.com</p>#}
+{#                                <div class="footer-social">#}
+{#                                    <a href=""><i class="fab fa-twitter"></i></a>#}
+{#                                    <a href=""><i class="fab fa-facebook-f"></i></a>#}
+{#                                    <a href=""><i class="fab fa-youtube"></i></a>#}
+{#                                    <a href=""><i class="fab fa-instagram"></i></a>#}
+{#                                    <a href=""><i class="fab fa-linkedin-in"></i></a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6 col-lg-3">#}
+{#                            <div class="footer-link">#}
+{#                                <h2>Services Areas</h2>#}
+{#                                <a href="">Building Construction</a>#}
+{#                                <a href="">House Renovation</a>#}
+{#                                <a href="">Architecture Design</a>#}
+{#                                <a href="">Interior Design</a>#}
+{#                                <a href="">Painting</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6 col-lg-3">#}
+{#                            <div class="footer-link">#}
+{#                                <h2>Useful Pages</h2>#}
+{#                                <a href="">About Us</a>#}
+{#                                <a href="">Contact Us</a>#}
+{#                                <a href="">Our Team</a>#}
+{#                                <a href="">Projects</a>#}
+{#                                <a href="">Testimonial</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6 col-lg-3">#}
+{#                            <div class="newsletter">#}
+{#                                <h2>Newsletter</h2>#}
+{#                                <p>#}
+{#                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu#}
+{#                                </p>#}
+{#                                <div class="form">#}
+{#                                    <input class="form-control" placeholder="Email here">#}
+{#                                    <button class="btn">Submit</button>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="container footer-menu">#}
+{#                    <div class="f-menu">#}
+{#                        <a href="">Terms of use</a>#}
+{#                        <a href="">Privacy policy</a>#}
+{#                        <a href="">Cookies</a>#}
+{#                        <a href="">Help</a>#}
+{#                        <a href="">FQAs</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="container copyright">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-6">#}
+{#                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>#}
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+{#                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
             <!-- Footer End -->
 
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

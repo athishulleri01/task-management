@@ -1,4 +1,4 @@
-{% extends 'temp/admin.html' %}
+{% extends 'temp/manager.html' %}
 {% block base %}
 <!DOCTYPE html>
 <html lang="en">
@@ -8,18 +8,22 @@
 </head>
 <body>
 <center><h2>view and replay complaint</h2></center>
-<table border="" align="center">
+<table border="" align="center" class="table table-striped">
 
     <tr>
-        <th>complaint</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Type</th>
         <th>date</th>
         <th>replay</th>
     </tr>
     {%for i in objval%}
     <tr>
+        <td>{{ i.title }}</td>
         <td>{{ i.complaint }}</td>
+        <td>{{ i.type }}</td>
         <td>{{ i.date }}</td>
-        <td><a href="{% url 'rp' idd=i.complaint_id %}">replay</a> </td>
+        <td><a href="{% url 'rp' idd=i.complaint_id %}" class="btn btn-primary">replay</a> </td>
 
     </tr>
     {% endfor %}

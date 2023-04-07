@@ -13,21 +13,30 @@
 {% csrf_token %}
 <table align="center">
     <tr>
-        <td>Employee</td>
+        <td>Name</td>
         <td><select name="mm">
             {% for i in objval %}
             <option value="{{ i.emp_id }}">{{ i.name }}</option>
             {% endfor %}
         </select> </td>
     </tr>
-     <tr>
-        <td>department</td>
-        <td><select name="nn">
-            {% for i in objval1 %}
-            <option value="{{ i.dept_id }}">{{ i.name }}</option>
+    <tr>
+        <td>Post</td>
+        <td><select name="mm">
+            {% for i in objval %}
+            <option value="taskmanager">Task manager</option>
+                <option value="employee">Employee</option>
             {% endfor %}
         </select> </td>
-        </tr>
+    </tr>
+{#     <tr>#}
+{#        <td>department</td>#}
+{#        <td><select name="nn">#}
+{#            {% for i in objval1 %}#}
+{#            <option value="{{ i.dept_id }}">{{ i.name }}</option>#}
+{#            {% endfor %}#}
+{#        </select> </td>#}
+{#        </tr>#}
      <tr>
         <td>join date</td>
         <td><input type="date" name="jj"> </td>

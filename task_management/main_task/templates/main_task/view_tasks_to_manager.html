@@ -7,20 +7,30 @@
     <title>Title</title>
 </head>
 <body>
-
-<table align="center" border="2">
+<center><h2>Assign Task To TaskManager</h2></center>
+<table align="center" border="2" class="table table-striped">
     <tr>
+        <th>Task Id</th>
         <th>Title</th>
         <th>Description</th>
         <th>Start date</th>
         <th>Due date</th>
+        <th></th>
     </tr>
-    {% for i in x %}
+    {% for i in p %}
     <tr>
+        <td>{{ i.mt_id }}</td>
         <td>{{ i.title }}</td>
         <td>{{ i.description }}</td>
-        <td>{{ i.start_date }}</td>
-        <td>{{ i.due_date }}</td>
+        <td>{{ i.assign_date }}</td>
+        <td>{{ i.due_date}}</td>
+        <td><a href="/maintask2/post/{{ i.mt_id }}/#cc " class="btn btn-primary">Assign</a> </td>
+{#        {% if i.status == 'complete' %}#}
+{#        <td><a href="{% url 'sub1' idd=i.mt_id %}" class="btn btn-primary">submit</a> </td>#}
+{#            {% else %}#}
+{#            <td></td>#}
+{#    {% endif %}#}
+{#    <td><a href="/main_task/vw_sumbit_task_mngrr/" class="btn btn-primary">View</a> </td>#}
     </tr>
     {% endfor %}
 </table>

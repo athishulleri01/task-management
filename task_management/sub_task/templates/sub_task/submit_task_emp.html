@@ -1,0 +1,52 @@
+ {% extends 'temp/employee.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table align="center">
+{#    <thead>Submit Task</thead>#}
+    <tr>
+        <td>Task Id</td>
+        <td><input type="text" value="{{ x.st_id }}" readonly></td>
+    </tr>
+    <tr>
+        <td>Title</td>
+        <td><input type="text" value="{{ x.subtitle }}" readonly></td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td><input type="text" value="{{ x.description }}"readonly></td>
+    </tr>
+    <tr>
+        <td>File</td>
+        <td><input type="text" value="{{ x.file_attach }}"readonly></td>
+    </tr>
+    <tr>
+        <td>Statement</td>
+        <td><textarea name="s_dec" ></textarea></td>
+    </tr>
+    <tr>
+        <td>File attach 1</td>
+        <td><input type="file" name="file1"></td>
+    </tr>
+    <tr>
+        <td>File attach 2</td>
+        <td><input type="file" name="file2"></td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" class="btn btn-primary"></td>
+
+    </tr>
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

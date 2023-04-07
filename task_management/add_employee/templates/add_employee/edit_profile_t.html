@@ -1,0 +1,46 @@
+{% extends 'temp/taskmanager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <td>photo</td>
+         <td><input type="file" value="{{ x.photo }}" name="img"></td>
+    </tr>
+    <tr>
+        <td>Emp id</td>
+        <td><input type="text" value="{{ x.emp_id }}" name="email"></td>
+    </tr>
+     <tr>
+        <td>Email id</td>
+        <td><input type="text" value="{{ x.email }}" name="email"></td>
+    </tr>
+    <tr>
+        <td>contact number</td>
+         <td><input type="text" value="{{ x.contact_no }}" name="cont_no"></td>
+    </tr>
+    <tr>
+        <td>password</td>
+         <td><input type="password" value="{{ x.password }}" name="pass"></td>
+    </tr>
+{#    <tr>#}
+{#        <td>Email</td>#}
+{#         <td><input type="text" value="{{ x.email }}" name="pass"></td>#}
+{#    </tr>#}
+    <tr>
+        <td></td>
+         <td><input type="submit" value="edit"></td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

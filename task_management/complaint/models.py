@@ -8,6 +8,9 @@ class Complaint(models.Model):
     reply = models.CharField(max_length=500, blank=True, null=True)
     date = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=45, blank=True, null=True)
+    type = models.CharField(max_length=45, blank=True, null=True)
+    title = models.CharField(max_length=45, blank=True, null=True)
+    replay_date = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = False

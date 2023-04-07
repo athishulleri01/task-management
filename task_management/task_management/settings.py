@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'video_conference.apps.VideoConferenceConfig',
     'job.apps.JobConfig',
     'manager.apps.ManagerConfig',
-    'employee_reg.apps.EmployeeRegConfig',
+    'add_employee.apps.AddEmployeeConfig',
     'designation.apps.DesignationConfig',
     'department.apps.DepartmentConfig',
     'main_task.apps.MainTaskConfig',

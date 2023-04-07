@@ -7,20 +7,24 @@
     <title>Title</title>
 </head>
 <body>
-
-<table align="center" border="2">
+<center><h2>Work Status</h2></center>
+<table align="center" border="2" class="table table-striped">
     <tr>
         <th>Title</th>
-        <th>Start date</th>
+        <th>Assign date</th>
         <th>Due date</th>
         <th>Task Status</th>
+        <th></th>
+        <th></th>
     </tr>
     {% for i in x %}
     <tr>
         <td>{{ i.title }}</td>
-        <td>{{ i.start_date }}</td>
+        <td>{{ i.assign_date }}</td>
         <td>{{ i.due_date }}</td>
         <td>{{ i.m_status }}</td>
+        <td><a href="{% url 'del' idd=i.mt_id %}" class="btn btn-primary">Delete</a></td>
+        <td><a href="/main_task/vw_sumbit_task_admin/{{ i.mt_id }}" class="btn btn-primary">view work</a></td>
     </tr>
     {% endfor %}
 </table>

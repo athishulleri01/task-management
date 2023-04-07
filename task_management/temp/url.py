@@ -6,4 +6,5 @@ urlpatterns = [
     url('employee/',views.employee),
     url('manager/',views.manager),
     url('index/',views.index),
+    url('taskm/',views.task)
 ]

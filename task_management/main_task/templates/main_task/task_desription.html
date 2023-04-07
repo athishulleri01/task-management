@@ -11,8 +11,9 @@
         <th>title</th>
         <th>description</th>
         <th>file</th>
-        <th>current date</th>
-        <th>end date</th>
+
+        <th>assign date</th>
+        <th>due date</th>
         <th>summary</th>
         <th>feedback</th>
     </tr>
@@ -20,11 +21,12 @@
     <tr>
         <td>{{i.title}}</td>
         <td>{{ i.description }}</td>
-        <td>{{ i.file_attach }}</td>
-        <td>{{ i.current_date }}</td>
-        <td>{{ i.end_date }}</td>
-        <td><a href="{% url 'vs' idd=i.mt_id %}#cc">summary</a> </td>
-        <td><a href="{%  url 'pfeed' idd=i.mt_id%}#cc">feedback</a></td>
+        <td><img src="/static/{{ i.file_attach }}" height="50px" width="50px"><a href="/static/{{ i.file_attach }}" class="btn btn-primary">open</a></td>
+
+        <td>{{ i.assign_date }}</td>
+        <td>{{ i.due_date }}</td>
+        <td><a href="{% url 'vs' idd=i.mt_id %}#cc" class="btn btn-primary">summary</a> </td>
+        <td><a href="{%  url 'pfeed' idd=i.mt_id%}#cc" class="btn btn-primary">feedback</a></td>
     </tr>
     {% endfor %}
 </table>

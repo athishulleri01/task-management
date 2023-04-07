@@ -1,0 +1,35 @@
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="" class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>contact no</th>
+        <th>password</th>
+        <th>photo</th>
+        <th></th>
+    </tr>
+    {% for i in objval %}
+    <tr>
+        <td>{{ i.emp_id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.contact_no }}</td>
+        <td>{{ i.password }}</td>
+        <td><img src="/static/{{ i.photo }}" height="100" width="100"></td>
+        <td><a href="{% url 'poo' idd=i.emp_id %}" class="btn btn-primary"> update</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

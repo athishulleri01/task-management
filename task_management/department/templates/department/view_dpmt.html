@@ -8,14 +8,17 @@
 </head>
 <body>
 <center><h2>view department</h2></center>
-<table border="" align="center">
+<table border="" align="center" class="table table-striped">
 
     <tr>
-        <th>department</th>
+        <th>Department</th>
+                <th>Description</th>
+
     </tr>
     {%for i in objval%}
     <tr>
         <td>{{ i.name}}</td>
+     <td>{{ i.description}}</td>
     </tr>
     {% endfor %}
 

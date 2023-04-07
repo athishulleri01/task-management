@@ -1,0 +1,37 @@
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>View Submited Work</h2></center>
+<table align="center" border="2">
+    <tr>
+        <th>Title</th>
+        <th>Decription</th>
+        <th>Due date</th>
+        <th>file</th>
+        <th></th>
+    </tr>
+    {% for i in x1 %}
+    <tr>
+        <td>{{ i.title }}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.due_date }}</td>
+      <td><img src="/static/{{ i.tskmgr_submit }}" height="50px" width="50px"></td>
+    <td><a href="/static/{{ i.tskmgr_submit }}" class="btn btn-primary">download1</a></td>
+         {% if i.status == 'complete' %}#}
+        <td><a href="{% url 'sub1' idd=i.mt_id %}" class="btn btn-primary">submit</a> </td>
+            {% else %}
+            <td></td>
+    {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

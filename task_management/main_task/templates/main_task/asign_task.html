@@ -7,13 +7,14 @@
     <title>Title</title>
 </head>
 <body>
+
 <form method="post">
     {% csrf_token %}
-<center><h2>asign task to manager</h2></center>
+<center><h2>Assign task To Manager</h2></center>
 <table align="center">
     <tr>
-        <td>title</td>
-        <td><input type="text" name="title"  class="form-control"></td>
+        <td>Task name</td>
+        <td><input type="text" name="tname" class="form-control"></td>
     </tr>
     <tr>
         <td>description</td>
@@ -23,14 +24,39 @@
         <td>file attach</td>
         <td><input type="file" name="file"  class="form-control"></td>
     </tr>
+    <tr>
+        <td>Department</td>
+        <td><select  id="crs" name="crs"  class="form-control">
+        {% if ok %}
+            <option value=0>select</option>
+                {% for i in ok %}
+                <option value="{{ i.department}}">{{ i.department}}</option>
+                {% endfor %}
+        {% endif %}
+        </select>
+        </td>
+    <td>
+        <select id="stname" name="stname">
 
-     <tr>
-        <td>start date</td>
-        <td><input type="date" name="s_date" class="form-control"></td>
+
+        </select>
+    </td>
+    </tr>
+{#    <tr>#}
+{#        <td>manager</td>#}
+{#        <td><select name="mm"  class="form-control">#}
+{#            {% for i in ok %}#}
+{#            <option value="{{ i.emp_id }}">{{ i.name}}</option>#}
+{#            {% endfor %}#}
+{#        </select> </td>#}
+{#    </tr>#}
+    <tr>
+        <td>Due date</td>
+        <td><input type="date" name="due_date" class="form-control"></td>
     </tr>
      <tr>
-        <td>end date</td>
-        <td><input type="date" name="e_date" class="form-control"></td>
+        <td>Deadline</td>
+        <td><input type="date" name="dead_date" class="form-control"></td>
     </tr>
      <tr>
         <td></td>
@@ -38,6 +64,57 @@
     </tr>
 </table>
     </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("#crs").change(function () {
+        var optionSelected = $(this).find("option:selected");
+        var valueSelected =optionSelected.val();
+        var empoyee_name = optionSelected.text();
+        {#alert(valueSelected);#}
+        $.ajax({
+            url:'/main_task/drop/',
+            data:{
+                'cid':valueSelected,
+            },
+            dataType:'json',
+            success:function (data) {
+
+                $("#stname").empty();
+                for(i =0;i<data.emplis.length;i++){
+                    {#alert(data.emid[i]);#}
+                    $("#stname").append('<option value='+data.emid[i]+'>'+data.emplis[i]+'</option>');
+
+
+                }
+            }
+        })
+    })
+</script>
 </body>
 </html>
 {% endblock %}
+{#    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>#}
+{#<script>#}
+{#    $("#crs").change(function () {#}
+{#        var optionSelected = $(this).find("option:selected");#}
+{#        var valueSelected =optionSelected.val();#}
+{#        var empoyee_name = optionSelected.text();#}
+{#        $.ajax({#}
+{#            url:'/main_task/drop/',#}
+{#            data:{#}
+{#                'cid':valueSelected,#}
+{#            },#}
+{#            dataType:'json',#}
+{#            success:function (data) {#}
+{#                alert('hello');#}
+{#                $("#empname").empty();#}
+{#                for(i =0;i<data.emplis.length;i++){#}
+{#                    $("$stname").append('<option value='+data.emid[i]+'>'+data.emid[i]+'</option>');#}
+{##}
+{#                }#}
+{#            }#}
+{#        })#}
+{#    })#}
+{#</script>#}
+

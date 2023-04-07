@@ -1,0 +1,34 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>view admin notifiction</h2></center>
+<table border="" align="center" class="table table-striped">
+
+    <tr>
+        <th>title</th>
+        <th>description</th>
+        <th>file</th>
+        <th>date</th>
+        <th>Delete</th>
+    </tr>
+    {%for i in objval%}
+    <tr>
+        <td>{{ i.tile }}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.file_attach }}</td>
+        <td>{{ i.date}}</td>
+        <td><a href="{% url 'dl' idd=i.na_id %}" class="btn btn-primary">Delete</a></td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
+{% endblock %}

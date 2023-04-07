@@ -1,0 +1,49 @@
+ {% extends 'temp/taskmanager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table align="center" border="2" class="table table-striped">
+    <tr>
+        <th>Task Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>File</th>
+        <th>Due date</th>
+        <th>Deadline</th>
+        <th>Asign</th>
+        <th>Submit to manager</th>
+    </tr>
+    {% for i in x %}
+    <tr>
+        <td>{{ i.mt_id }}</td>
+        <td>{{ i.title }}</td>
+        <td>{{ i.task_mng_desc }}</td>
+        <td>{{ i.file_attach}}</td>
+        <td>{{ i.task_due_tm_date}}</td>
+        <td>{{ i.task_deadline_tm_date}}</td>
+{#        <td><a href="#{{ i.mt_id }}/#cc">Assign</a> </td>#}
+    <td><a href="/maintask2/assign_emp/{{ i.mt_id }}" class="btn btn-primary">Assign</a> </td>
+{#        {% if k == o %}#}
+{#            <td><a href="{% url 'cmp' idd=i.mt_id %}" class="btn btn-primary">submit</a> </td>#}
+{#        {% else %}#}
+{#            <td></td>#}
+{#        {% endif %}#}
+     {% if k == o %}
+            <td><a href="/main_task/tskmng_submit/" class="btn btn-primary">Submit to manager</a> </td>
+        {% else %}
+            <td></td>
+        {% endif %}
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

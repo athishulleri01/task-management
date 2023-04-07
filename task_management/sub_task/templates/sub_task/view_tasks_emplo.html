@@ -1,0 +1,37 @@
+ {% extends 'temp/employee.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table align="center" border="2" class="table table-striped">
+    <tr>
+        <th>Task Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>File</th>
+        <th>Start date</th>
+        <th>Due date</th>
+{#        <th>Dead line</th>#}
+        <th></th>
+    </tr>
+    {% for i in p %}
+    <tr>
+        <td>{{ i.st_id }}</td>
+        <td>{{ i.subtitle }}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.file_attach }}</td>
+        <td>{{ i.assign_date }}</td>
+        <td>{{ i.due_date}}</td>
+        <td><a href="/subtask/submit_task_emp/{{i.st_id }}" class="btn btn-primary">Start Work</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

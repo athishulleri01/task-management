@@ -8,18 +8,20 @@
 </head>
 <body>
 <center><h2>view summary</h2></center>
-<table border="" align="center">
+<table border="" align="center" class="table table-striped">
 
     <tr>
-        <th>title</th>
-        <th>summary</th>
-        <th>date</th>
+        <th>Title</th>
+        <th>Manager</th>
+        <th>Summary</th>
+        <th>Date</th>
     </tr>
     {%for i in objval%}
     <tr>
-        <td></td>
-        <td>{{ i.summary}}</td>
-        <td>{{ i.date}}</td>
+        <td>{{ i.title }}</td>
+        <td>{{ i.emp.name }}</td>
+        <td>{{ i.summary }}</td>
+        <td>{{ i.sum_date }}</td>
     </tr>
     {% endfor %}
 

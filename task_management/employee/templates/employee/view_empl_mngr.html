@@ -1,0 +1,31 @@
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="">
+    <tr>
+        <th>Emp id</th>
+        <th>name</th>
+        <th>sub title</th>
+    </tr>
+    {% for i in x %}
+    <tr>
+
+        <td>{{ i.emp_id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i }}</td>
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

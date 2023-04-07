@@ -1,0 +1,31 @@
+ {% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table align="center" border="2">
+    <tr>
+        <th>Task Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>file</th>
+    </tr>
+    {% for i in p %}
+    <tr>
+        <td>{{ i.mt_id }}</td>
+        <td>{{ i.title }}</td>
+        <td>{{ i.description }}</td>
+        <td><img src="/static/{{ i.tskmgr_submit }}" height="50px" width="50px"></td>
+        <td><a href="/static/{{ i.tskmgr_submit }}" class="btn btn-primary">download1</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

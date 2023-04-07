@@ -5,16 +5,15 @@ import datetime
 # Create your views here.
 def post_summary(request,idd):
     if request.method=='POST':
-        obj=Summary()
-        obj.m_id=1
-        obj.mt_id=idd
+        obj=MainTask.objects.get(mt_id=idd)
+        # obj.mt_id=idd
         obj.summary=request.POST.get('summary')
-        obj.date=datetime.datetime.now()
+        obj.sum_date=datetime.datetime.now()
         obj.save()
     return render(request,'summary/post_summary.html')
 
 def view_sum(request):
-    ob=Summary.objects.all()
+    ob=MainTask.objects.all()
     context={
         'objval':ob,
 

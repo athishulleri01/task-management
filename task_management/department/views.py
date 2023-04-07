@@ -5,6 +5,8 @@ def post(request):
     if request.method=='POST':
         ob=Department()
         ob.name=request.POST.get('dept')
+        ob.description=request.POST.get('dept_dec')
+        ob.status=''
         ob.save()
     return render(request,'department/create.html')
 

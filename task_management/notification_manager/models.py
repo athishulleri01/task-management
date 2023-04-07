@@ -7,7 +7,7 @@ class NotificationManager(models.Model):
     description = models.CharField(max_length=500, blank=True, null=True)
     date = models.DateTimeField(blank=True, null=True)
     title = models.CharField(max_length=45, blank=True, null=True)
-    fille_attach = models.CharField(max_length=45, blank=True, null=True)
+    fille_attach = models.CharField(max_length=300, blank=True, null=True)
 
     class Meta:
         managed = False

@@ -1,0 +1,45 @@
+{% extends 'temp/taskmanager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="">
+    <tr>
+        <th>Id</th>
+{#        <th>name</th>#}
+{#        <th>address</th>#}
+{#        <th>qualification</th>#}
+{#        <th>department</th>#}
+{#        <th>experiance</th>#}
+{#        <th>dob</th>#}
+        <th>email</th>
+        <th>contact no</th>
+        <th>password</th>
+        <th>photo</th>
+        <th></th>
+    </tr>
+    {% for i in objval %}
+    <tr>
+        <td>{{ i.emp_id }}</td>
+{#        <td>{{ i.name }}</td>#}
+{#        <td>{{ i.address }}</td>#}
+{#        <td>{{ i.qualification }}</td>#}
+{#        <td>{{ i.department }}</td>#}
+{#        <td>{{ i.experience }}</td>#}
+{#        <td>{{ i.dob }}</td>#}
+        <td>{{ i.email }}</td>
+        <td>{{ i.contact_no }}</td>
+        <td>{{ i.password }}</td>
+        <td><img src="/static/{{ i.photo }}" height="100" width="100"></td>
+        <td><a href="{% url 'poo' idd=i.emp_id %}" >update</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

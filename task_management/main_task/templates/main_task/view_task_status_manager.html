@@ -1,0 +1,36 @@
+ {% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>View Task Status</h2></center>
+<table align="center" border="2" class="table table-striped">
+    <tr>
+        <th>Task Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Start date</th>
+        <th>Due date</th>
+        <th>status</th>
+        <th></th>
+    </tr>
+    {% for i in p %}
+    <tr>
+        <td>{{ i.mt_id }}</td>
+        <td>{{ i.title }}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.assign_date }}</td>
+        <td>{{ i.due_date}}</td>
+        <td>{{ i.m_status}}</td>
+    <td><a href="/main_task/vw_sumbit_task_mngrr/" class="btn btn-primary">View</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

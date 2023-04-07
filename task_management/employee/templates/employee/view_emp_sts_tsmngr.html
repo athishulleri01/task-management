@@ -1,0 +1,35 @@
+{% extends 'temp/taskmanager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="">
+    <tr>
+        <th>Emp id</th>
+{#        <th>photo</th>#}
+        <th>name</th>
+        <th>department</th>
+        <th>sub title</th>
+    </tr>
+    {% for i in x %}
+    <tr>
+
+        <td>{{ i.emp_id }}</td>
+{#        <td><img src="/static/{{ i.photo }}" height="50px" width="50px"></td>#}
+        <td>{{ i.emp.name }}</td>
+        <td>{{ i.emp.department }}</td>
+    <td>{{ i.subtitle }}</td>
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

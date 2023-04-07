@@ -1,0 +1,35 @@
+ {% extends 'temp/taskmanager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table align="center" border="2">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>File 1</th>
+        <th>File 2</th>
+        <th></th>
+    </tr>
+    {% for i in p %}
+    <tr>
+    <td>{{ i.subtitle }}</td>
+        <td>{{ i.description }}</td>
+{#        <td><img src="/static/{{ i.file_attach }}" height="50px" width="50px"></td>#}
+        <td><img src="/static/{{ i.s_file_attach1 }}" height="50px" width="50px"></td>
+        <td><img src="/static/{{ i.s_file_attach2 }}" height="50px" width="50px"></td>
+        <td><a href="/static/{{ i.s_file_attach1 }}" class="btn btn-primary">download1</a></td>
+        <td><a href="/static/{{ i.s_file_attach2 }}" class="btn btn-primary">download2</a></td>
+        <td><a href="{% url 'rt' idd=i.st_id %}" class="btn btn-primary">Reject</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

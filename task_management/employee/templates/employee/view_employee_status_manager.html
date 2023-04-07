@@ -1,0 +1,31 @@
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>View TaskManager Details</h2></center>
+<table align="center" border="" class="table table-striped">
+    <tr>
+        <th>Emp id</th>
+        <th>Task Manager</th>
+        <th>department</th>
+        <th>Task Name</th>
+    </tr>
+    {% for i in x %}
+    <tr>
+
+        <td>{{ i.task_manager_id }}</td>
+        <td>{{ i.task_mngr_nm }}</td>
+        <td>{{ i.department }}</td>
+        <td>{{ i.title }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

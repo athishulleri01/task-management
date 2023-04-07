@@ -1,0 +1,94 @@
+{% extends 'temp/manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+  .image-upload>input {
+    display: none;
+  }
+
+  #img {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 100px;
+  }
+
+  article,
+  aside,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+</style>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <center><h2>Edit profile</h2></center>
+<table align="center">
+    <tr>
+        <td></td>
+         <td>
+             <div class="image-upload text-center" style="margin-bottom: 30px">
+                <label for="file-input">
+                  <img id="img" src="/static/img/avatar.png" alt="Upload Image" style="margin: auto" width="100" height="100"/>
+                </label>
+
+                <input hidden id="file-input" onchange="readURL(this)" name="img" type="file" />
+              </div>
+{#             <input type="file" value="{{ x.photo }}" name="img">#}
+         </td>
+    </tr>
+{#    <tr>#}
+{#        <td>Emp id</td>#}
+{#        <td><input type="text" value="{{ x.emp_id }}" name="email"></td>#}
+{#    </tr>#}
+     <tr>
+        <td>Email id</td>
+        <td><input type="text" value="{{ x.email }}" name="email"></td>
+    </tr>
+    <tr>
+        <td>contact number</td>
+         <td><input type="text" value="{{ x.contact_no }}" name="cont_no"></td>
+    </tr>
+    <tr>
+        <td>password</td>
+         <td><input type="password" value="{{ x.password }}" name="pass"></td>
+    </tr>
+{#    <tr>#}
+{#        <td>Email</td>#}
+{#         <td><input type="text" value="{{ x.email }}" name="pass"></td>#}
+{#    </tr>#}
+    <tr>
+        <td></td>
+         <td><input type="submit" value="Save" class="btn btn-primary"></td>
+    </tr>
+
+</table>
+</form>
+</body>
+<script>
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $("#img").attr("src", e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+</html>
+{% endblock %}

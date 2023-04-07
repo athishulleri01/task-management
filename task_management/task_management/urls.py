@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
-
+from login import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('call/',include('call.url')),
@@ -26,14 +26,16 @@ urlpatterns = [
     url('complaint/',include('complaint.url')),
     url('department/',include('department.url')),
     url('designation/',include('designation.url')),
-    url('employee_reg/',include('employee_reg.url')),
+    url('add_employee/', include('add_employee.url')),
     url('login/',include('login.url')),
     url('main_task/',include('main_task.url')),
     url('manager/',include('manager.url')),
     url('notification_admin/',include('notification_admin.url')),
     url('notification_manager/',include('notification_manager.url')),
-    url('sub_task/',include('sub_task.url')),
+    url('maintask2/',include('sub_task.url')),
+    url('subtask/',include('sub_task.url')),
     url('summary/',include('summary.url')),
     url('employee/',include('employee.url')),
     url('temp/',include('temp.url')),
+    url('$',views.log)
     ]

@@ -1,0 +1,137 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+  .image-upload>input {
+    display: none;
+  }
+
+  #img {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 100px;
+  }
+
+  article,
+  aside,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+</style>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+<center><h3>Registration</h3></center>
+    <table align="center">
+        <tr>
+            <div class="image-upload text-center" style="margin-bottom: 30px">
+                <label for="file-input">
+                  <img id="img" src="/static/img/avatar.png" alt="Upload Image" style="margin: auto "width="100" />
+                </label>
+
+                <input hidden id="file-input" onchange="readURL(this)" name="img" type="file" />
+              </div>
+{#            <td>Photo</td>#}
+{#            <td><input type="file" name="img" ></td>#}
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="uname" class="form-control"></td>
+        </tr>
+         <tr>
+            <td>Adress</td>
+             <td><textarea name="address" class="form-control"></textarea></td>
+        </tr>
+         <tr>
+            <td>Qualification</td>
+            <td><input type="text" name="qualification" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td><select name="dpt" class="form-control">
+                {% for i in ok %}
+            <option value="{{ i.name }}">{{ i.name }}</option>
+            {% endfor %}
+            </select></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>
+                <select name="post" class="form-control">
+                    <option>Manager</option>
+                    <option value="taskmanager">Task Manager</option>
+                    <option value="employee">Employee</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Experience</td>
+            <td><input type="number" name="exp" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td><input type="date" name="dob" class="form-control"></td>
+        </tr>
+         <tr>
+            <td>E mail</td>
+            <td><input type="email" name="email" class="form-control"></td>
+        </tr>
+         <tr>
+            <td>contat No</td>
+            <td><input type="number" name="cont_no" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Join Date</td>
+            <td><input type="date" name="jdate" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" name="pass" class="form-control"></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td><input type="submit" class="btn btn-primary"></td>
+        </tr>
+    </table>
+{% if msg == 'Successfull' %}
+    <script>
+    alert("Registered successfully")
+    </script>
+    {% elif msg == 'User' %}
+    <script>
+    alert(" User with same password and email exist")
+    </script>
+{% endif %}
+</form>
+
+</body>
+<script>
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $("#img").attr("src", e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+</html>
+{% endblock %}
+
